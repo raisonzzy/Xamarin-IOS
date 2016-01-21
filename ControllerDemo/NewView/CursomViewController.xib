@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CursomViewController">
+            <connections>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="lblNew" destination="5" id="name-outlet-5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NEW CONTROLLER" lineBreakMode="tailTruncation" minimumFontSize="10" id="5" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="76" y="80" width="161" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <constraints>
+                        <constraint id="10" firstAttribute="width" constant="161"/>
+                        <constraint id="11" firstAttribute="height" constant="21"/>
+                    </constraints>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="14" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                    <rect key="frame" x="256" y="332" width="67" height="30"/>
+                    <state key="normal" title="One View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="UIButton14_TouchUpInside:" destination="-1" id="31" eventType="touchUpInside"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="21" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="380" y="172" width="197" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="28" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                    <rect key="frame" x="256" y="393" width="67" height="30"/>
+                    <state key="normal" title="Two View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="UIButton28_TouchUpInside:" destination="-1" id="32" eventType="touchUpInside"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint id="8" firstItem="5" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="76"/>
+                <constraint id="9" firstItem="5" firstAttribute="top" secondItem="2" secondAttribute="top" constant="80"/>
+                <constraint id="26" firstItem="2" firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="277"/>
+                <constraint id="27" firstItem="2" firstAttribute="bottom" secondItem="14" secondAttribute="bottom" constant="238"/>
+                <constraint id="29" firstItem="2" firstAttribute="trailing" secondItem="28" secondAttribute="trailing" constant="277"/>
+                <constraint id="30" firstItem="2" firstAttribute="bottom" secondItem="28" secondAttribute="bottom" constant="177"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
