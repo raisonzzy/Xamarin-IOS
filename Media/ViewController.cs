@@ -66,7 +66,7 @@ namespace Media
 			imagePicker.FinishedPickingMedia += ImagePicker_FinishedPickingImage;
 			imagePicker.Canceled+=ImagePicker_Canceled;
 
-			this.View.AddSubviews (btn, imgView, btnAlbum, btnSelMedia, btnCamera);
+			this.View.AddSubviews (btn, imgView, btnAlbum, btnSelMedia, btnCamera, btnCustomCamera);
 		}
 		public async void Btn_TouchUpInside(object sender,EventArgs e)
 		{
@@ -95,6 +95,36 @@ namespace Media
 		{
 			_flag=1;
 			this.imagePicker.SourceType = UIImagePickerControllerSourceType.Camera;
+			UIView vv = new UIView (this.imagePicker.View.Frame);
+			UIToolbar toolbar = new UIToolbar (new CoreGraphics.CGRect (0, this.View.Frame.Height - 88, this.View.Frame.Width, 80));
+			UIButton btnta = new UIButton ();
+			btnta.Frame = new CoreGraphics.CGRect (0, 0, 50, 50);
+			btnta.SetImage (UIImage.FromFile("1_130419110725_6.png"), UIControlState.Normal);
+			btnta.ShowsTouchWhenHighlighted = true;
+			btnta.TouchUpInside += (send, ev) => {
+				if (this.imagePicker.CameraDevice == UIImagePickerControllerCameraDevice.Rear) {
+					if (UIImagePickerController.IsCameraDeviceAvailable (UIImagePickerControllerCameraDevice.Front)) {
+						this.imagePicker.CameraDevice = UIImagePickerControllerCameraDevice.Front;
+					}
+				} else {
+					this.imagePicker.CameraDevice = UIImagePickerControllerCameraDevice.Rear;
+				}
+			};
+			UIBarButtonItem spItem = new UIBarButtonItem (btnta);
+
+			UIButton btntad = new UIButton ();
+			btntad.Frame = new CoreGraphics.CGRect (60, 0, 50, 50);
+			btntad.SetImage (UIImage.FromFile("1_130124110644_3.png"), UIControlState.Normal);
+			btntad.ShowsTouchWhenHighlighted = true;
+			btntad.TouchUpInside += (send, ev) => {
+				imagePicker.TakePicture();
+			};
+			UIBarButtonItem dItem = new UIBarButtonItem (btntad);
+
+			toolbar.Items = new UIBarButtonItem[]{ spItem, dItem };
+			vv.AddSubview (toolbar);
+			this.imagePicker.ShowsCameraControls = false;
+			this.imagePicker.CameraOverlayView = vv;
 
 			await this.PresentViewControllerAsync (this.imagePicker, true);
 		}

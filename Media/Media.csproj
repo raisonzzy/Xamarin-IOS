@@ -100,4 +100,8 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\1_130419110725_6.png" />
+    <BundleResource Include="Resources\1_130124110644_3.png" />
+  </ItemGroup>
 </Project>
