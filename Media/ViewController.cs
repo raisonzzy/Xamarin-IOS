@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
 using UIKit;
-
+using MediaPlayer;
 namespace Media
 {
 	public partial class ViewController : UIViewController
@@ -15,6 +15,8 @@ namespace Media
 		UIWebView webview;
 		UIButton btnCamera;
 		UIButton btnCustomCamera;
+		UIButton btnPlay;
+		MPMoviePlayerController moviePlayer;
 
 		public ViewController (IntPtr handle) : base (handle)
 		{
@@ -61,12 +63,19 @@ namespace Media
 			btnCustomCamera.SetTitleColor (UIColor.White, UIControlState.Normal);
 			btnCustomCamera.TouchUpInside += BtnCustomCamera_TouchUpInside;
 
+			btnPlay= new UIButton (UIButtonType.System);
+			btnPlay.Frame = new CoreGraphics.CGRect (580, 300, 200, 30);
+			btnPlay.SetTitle ("播放视频", UIControlState.Normal);
+			btnPlay.BackgroundColor = UIColor.Gray;
+			btnPlay.SetTitleColor (UIColor.White, UIControlState.Normal);
+			btnPlay.TouchUpInside += BtnPlay_TouchUpInside;
+
 			imagePicker=new UIImagePickerController();
 			//imagePicker.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
 			imagePicker.FinishedPickingMedia += ImagePicker_FinishedPickingImage;
 			imagePicker.Canceled+=ImagePicker_Canceled;
 
-			this.View.AddSubviews (btn, imgView, btnAlbum, btnSelMedia, btnCamera, btnCustomCamera);
+			this.View.AddSubviews (btn, imgView, btnAlbum, btnSelMedia, btnCamera, btnCustomCamera, btnPlay);
 		}
 		public async void Btn_TouchUpInside(object sender,EventArgs e)
 		{
@@ -89,6 +98,26 @@ namespace Media
 			//this.imagePicker.CameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo;
 			this.imagePicker.CameraFlashMode=UIImagePickerControllerCameraFlashMode.Auto;
 			await this.PresentViewControllerAsync (this.imagePicker, true);
+		}
+
+		public void BtnPlay_TouchUpInside(object sender,EventArgs e)
+		{
+			moviePlayer = new MPMoviePlayerController (NSUrl.FromFilename ("VID_20150904_123931.mp4"));
+			moviePlayer.View.Frame = new CoreGraphics.CGRect (50, 50, 500, 700);
+			this.View.AddSubview (moviePlayer.View);
+			UIButton btnp = new UIButton (UIButtonType.System);
+			btnp.Frame = new CoreGraphics.CGRect (580, 340, 90, 30);
+			btnp.SetTitle ("Play", UIControlState.Normal);
+			btnp.TouchUpInside += (send, ev) => {
+				moviePlayer.Play ();
+			};
+			UIButton btnstop = new UIButton (UIButtonType.System);
+			btnstop.Frame = new CoreGraphics.CGRect (680, 340, 90, 30);
+			btnstop.SetTitle ("Stop", UIControlState.Normal);
+			btnstop.TouchUpInside += (send, ev) => {
+				moviePlayer.Stop ();
+			};
+			this.View.AddSubviews (btnp, btnstop);
 		}
 
 		public async void BtnCustomCamera_TouchUpInside(object sender,EventArgs e)

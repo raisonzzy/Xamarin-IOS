@@ -103,5 +103,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\1_130419110725_6.png" />
     <BundleResource Include="Resources\1_130124110644_3.png" />
+    <BundleResource Include="Resources\VID_20150904_123931.mp4" />
   </ItemGroup>
 </Project>
