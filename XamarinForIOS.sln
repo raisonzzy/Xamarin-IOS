@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerDemo", "..\..\Xamarin\HelloWorld\ControllerDemo\ControllerDemo.csproj", "{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhone.Build.0 = Release|iPhone
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal
