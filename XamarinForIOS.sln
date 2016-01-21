@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebViewCore", "WebViewCore\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media", "Media\Media.csproj", "{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapCore", "MapCore\MapCore.csproj", "{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -111,6 +113,14 @@ Global
 		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhone.Build.0 = Release|iPhone
 		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{C12495F7-382A-4BDA-B6C9-DA3B85B3B565}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Release|iPhone.Build.0 = Release|iPhone
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D65A2232-EC3D-4A70-B1F0-E60B5F8AD619}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{F72C050A-83A6-448F-A816-BAAF400DF6EA}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{F72C050A-83A6-448F-A816-BAAF400DF6EA}.Debug|iPhone.Build.0 = Debug|iPhone
 		{F72C050A-83A6-448F-A816-BAAF400DF6EA}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
