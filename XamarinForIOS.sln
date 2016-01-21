@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnwindSegue", "UnwindSegue\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebViewCore", "WebViewCore\WebViewCore.csproj", "{08E97FEF-868C-4CFA-9727-2926700247D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media", "Media\Media.csproj", "{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -29,6 +31,14 @@ Global
 		Debug|iPhone = Debug|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Release|iPhone.Build.0 = Release|iPhone
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{06E70247-82B1-4A0D-89AE-BA3ABCAF800A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{08DF3B10-E552-4B9A-AF29-9F31ACBB5BB1}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{08DF3B10-E552-4B9A-AF29-9F31ACBB5BB1}.Debug|iPhone.Build.0 = Debug|iPhone
 		{08DF3B10-E552-4B9A-AF29-9F31ACBB5BB1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
